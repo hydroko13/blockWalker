@@ -9,6 +9,10 @@ See details in the [UNLICENSE](https://github.com/hydroko13/blockWalker/blob/mai
 
 # Instructions
 
+To build this project, you need [premake](https://premake.github.io/) installed on your system
+You should be able to run `premake5` from your system command prompt or terminal
+
+
 <br/>
 
 ## Clean
@@ -46,4 +50,4 @@ Then build the code by running ```make```
 # Third-Party Libraries
 
 This project uses [spdlog](https://github.com/gabime/spdlog), which is licensed under the MIT License.  
-See [`third_party/spdlog/LICENSE.txt`](https://github.com/hydroko13/blockWalker/blob/third_party/spdlog/LICENSE.txt) for details.
+See [`third_party/spdlog/LICENSE`](https://github.com/hydroko13/blockWalker/blob/third_party/spdlog/LICENSE) for details.
