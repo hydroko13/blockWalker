@@ -9,39 +9,34 @@ See details in the [UNLICENSE](https://github.com/hydroko13/blockWalker/blob/mai
 
 # Instructions
 
-To build this project, you need [premake](https://premake.github.io/) installed on your system
-You should be able to run `premake5` from your system command prompt or terminal
-
-This project also uses spdlog which needs to be installed using your package manager if you are using linux
-Instructions to do so can be found in the [spdlog github repository](https://github.com/gabime/spdlog)
-
-
+To build this project, you need [cmake](https://cmake.org/) installed on your system.
+<br/>
+You should be able to run `cmake` from your system command prompt or terminal
 
 <br/>
-
-## Clean
-Remove all project files, makefiles, and binaries
-```
-
-premake5 clean
-
-```
 
 ## Windows building
 
 Generate visual studio 2022 solution
 ```
-premake5 vs2022
+
+mkdir build
+cd build
+cmake -G "Visual Studio 17 2022" ..
+
 ```
 
-Then build the code by opening the .sln file in visual studio and building the solution
+Then build it by opening the .sln file in visual studio and building the solution
 
 ## Linux building
 
-
-Generate GNU makefiles
+Generate GNU makefile
 ```
-premake5 gmake
+
+mkdir build
+cd build
+cmake -G "Unix Makefiles" ..
+
 ```
 
 Then build the code by running ```make```
@@ -51,7 +46,16 @@ Then build the code by running ```make```
 <br/>
 
 
-# Third-Party Libraries
+# Libraries
 
-This project uses [spdlog](https://github.com/gabime/spdlog), which is licensed under the MIT License.  
-See [`thirdParty/spdlog/LICENSE`](https://github.com/hydroko13/blockWalker/blob/main/thirdParty/spdlog/LICENSE) for details.
+- [spdlog](https://github.com/gabime/spdlog)
+
+The license for spdlog is located in the /vendor/spdlog directory
+
+- [GLFW](https://github.com/glfw/glfw)
+
+The license for glfw is located in the /vendor/glfw-3.4 directory
+
+- [GLAD](https://github.com/Dav1dde/glad) 
+
+The license for glad is located in the /vendor/glad directory
