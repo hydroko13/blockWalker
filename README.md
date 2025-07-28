@@ -50,4 +50,4 @@ Then build the code by running ```make```
 # Third-Party Libraries
 
 This project uses [spdlog](https://github.com/gabime/spdlog), which is licensed under the MIT License.  
-See [`third_party/spdlog/LICENSE`](https://github.com/hydroko13/blockWalker/blob/third_party/spdlog/LICENSE) for details.
+See [`thirdParty/spdlog/LICENSE`](https://github.com/hydroko13/blockWalker/blob/thirdParty/spdlog/LICENSE) for details.
