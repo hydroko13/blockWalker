@@ -25,8 +25,8 @@ end
 
 
 newaction {
-    trigger = "vs-clean",
-    description = "Remove all visual studio generated binaries, and visual studio related files.",
+    trigger = "clean",
+    description = "Remove all generated binaries, visual studio related files, and makefiles.",
     execute = function()
         print("Removing binaries.")
         forceRemoveDir("./bin")
@@ -41,7 +41,12 @@ newaction {
         print("Removing visual studio project user settings.")
         os.remove("**.vcxproj.user")
         forceRemoveDir("./.vs")
-        print("Succesfully removed all visual studio files...")
+        print("Removing makefiles.")
+        os.remove("**/Makefile")
+        os.remove("./Makefile")
+
+
+        print("Done...")
         
 
     end

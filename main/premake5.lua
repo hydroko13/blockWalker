@@ -27,22 +27,41 @@ project "main"
     defines {
         "WINDOWS"
     }
+    filter { "system:windows" } 
+        links {
+            "glfw3",
+            
+            "opengl32"
+            
+        }
 
-    links {
-        "glfw3",
-        "opengl32"
-    }
-    
-    filter { "configurations:Debug" }
-        buildoptions "/MTd"
+    filter { "system:linux" }
+        links {
+            "glfw3",
+            "GL",
+            "GLU"
+        }
+        
+    filter { "configurations:Debug"}
+        filter { "system:windows" } 
+            buildoptions "/MTd"
+        
         runtime "Debug"
         symbols "on"
 
+    
+        
 
     filter {"configurations:Release"}
-        buildoptions "/MT"
+        filter { "system:windows" } 
+            buildoptions "/MT"
+        
         runtime "Release"
         optimize "on"
+
+    filter { "system:linux" }
+        buildoptions {"-Wall", "-Wextra"}
+    
 
 
 
