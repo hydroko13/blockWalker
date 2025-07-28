@@ -12,9 +12,17 @@ project "main"
     files {
         "cpp/**.cpp",
         "cpp/**.c",
-        "include/**.h"
-
+        "include/**.h",
+        "resources/images/**.png", -- I won't need this until later
+        "resources/shaders/**.glsl",  -- I'll need this pretty soon
+        "resources/audio/**.ogg",  -- I won't need this until MUCH later
+        "resources/lang/**.json", -- I won't need this until MUCH later
     }
+
+    filter { "files:resources/**.*" }
+        buildaction "Copy"
+
+    filter {}
 
     includedirs {
         "include"
