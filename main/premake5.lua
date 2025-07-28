@@ -11,6 +11,7 @@ project "main"
 
     files {
         "cpp/**.cpp",
+        "cpp/**.c",
         "include/**.h"
 
     }
@@ -19,8 +20,17 @@ project "main"
         "include"
     }
 
+    libdirs {
+        "lib"
+    }
+
     defines {
         "WINDOWS"
+    }
+
+    links {
+        "glfw3",
+        "opengl32"
     }
     
     filter { "configurations:Debug" }
