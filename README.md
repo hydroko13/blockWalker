@@ -12,6 +12,10 @@ See details in the [UNLICENSE](https://github.com/hydroko13/blockWalker/blob/mai
 To build this project, you need [premake](https://premake.github.io/) installed on your system
 You should be able to run `premake5` from your system command prompt or terminal
 
+This project also uses spdlog which needs to be installed using your package manager if you are using linux
+Instructions to do so can be found in the [spdlog github repository](https://github.com/gabime/spdlog)
+
+
 
 <br/>
 

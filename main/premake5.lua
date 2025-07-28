@@ -3,6 +3,7 @@ project "main"
     language "C++"
     cppdialect "C++17"
 
+
     staticruntime "on"
 
     targetdir("../bin/" .. outputdir .. "/%{prj.name}")
@@ -32,9 +33,8 @@ project "main"
         "lib"
     }
 
-    defines {
-        "WINDOWS"
-    }
+   
+
     filter { "system:windows" } 
         links {
             "glfw3",
@@ -43,16 +43,26 @@ project "main"
             
         }
 
+        defines {
+            "WINDOWS",
+            "UNICODE",
+            "_UNICODE"
+
+        }
+
+        
+
     filter { "system:linux" }
         links {
             "glfw3",
             "GL",
-            "GLU"
+            "GLU",
+            "spdlog"
         }
         
     filter { "configurations:Debug"}
         filter { "system:windows" } 
-            buildoptions "/MTd"
+            buildoptions {"/MTd", "/utf-8"}
         
         runtime "Debug"
         symbols "on"
@@ -62,7 +72,7 @@ project "main"
 
     filter {"configurations:Release"}
         filter { "system:windows" } 
-            buildoptions "/MT"
+            buildoptions { "/MT", "/utf-8"}
         
         runtime "Release"
         optimize "on"
