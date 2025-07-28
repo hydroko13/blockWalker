@@ -1,6 +1,6 @@
 .vscode/
 .vs/
-**/*.sln
+*.sln
 **/*.vcxproj
 **/*.vcxproj.filters
 **/*.vcxproj.user
