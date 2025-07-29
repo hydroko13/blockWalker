@@ -50,12 +50,16 @@ Then build the code by running ```make```
 
 - [spdlog](https://github.com/gabime/spdlog)
 
-The license for spdlog is located in the /vendor/spdlog directory
+spdlog uses the MIT license.
+You can find it at /vendor/spdlog/LICENSE
 
 - [GLFW](https://github.com/glfw/glfw)
 
-The license for glfw is located in the /vendor/glfw-3.4 directory
+GLFW is licensed under the zlib license
+You can find it at /vendor/glfw-3.4/LICENSE.md
+
 
 - [GLAD](https://github.com/Dav1dde/glad) 
 
-The license for glad is located in the /vendor/glad directory
+the generated files from Glad are in public domain
+

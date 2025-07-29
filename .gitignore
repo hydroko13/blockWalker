@@ -6,5 +6,4 @@
 **/*.vcxproj.user
 Makefile
 **/Makefile
-bin/
-bin-int/
+build/
